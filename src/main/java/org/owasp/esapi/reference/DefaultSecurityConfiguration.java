@@ -642,7 +642,7 @@ public class DefaultSecurityConfiguration implements SecurityConfiguration {
 				try {
 					// try root
 					String currentClasspathSearchLocation = "/ (root)";
-					in = loaders[i].getResourceAsStream(DefaultSearchPath.ROOT.toString());
+					in = loaders[i].getResourceAsStream(DefaultSearchPath.ROOT.value() + fileName);
 					
 					// try resourceDirectory folder
 					if (in == null) {
